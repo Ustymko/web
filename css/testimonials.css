@@ -1,0 +1,56 @@
+.testimonials {
+    background: #F8F8F8;
+    height: 774;
+}
+
+.testimonials__title {
+    padding-top: 79px;
+}
+
+.container-quote {
+    margin-top: 145px;
+    width: 450px;
+    margin-left: 110px;
+    margin-bottom: 179px;
+}
+
+.container-quote img {
+    margin-right: 16px;
+    margin-top: 145px;
+}
+
+blockquote {
+    margin: 0;
+}
+
+blockquote p {
+    font-family: 'Mulish', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+
+    color: black;
+
+}
+
+.container-quote .author {
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+.container-quote .founder {
+    color: rgba(0, 0, 0, 0.85);
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+}
+
+.container-testimonials {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-testimonials__picture {
+    margin-top: 189px;
+    margin-right: 100px;
+}

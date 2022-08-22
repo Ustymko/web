@@ -1,0 +1,42 @@
+.hero {
+    height: 883px;
+}
+
+.hero__paragraph {
+    width: 450px;
+    height: 90px;
+
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 30px;
+
+    font-family: 'Mulish', sans-serif;
+    color: #7D7987;
+}
+
+.hero__title {
+    width: 400px;
+    height: 100px;
+
+}
+
+.container-hero {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__inner {
+    margin-top: 250px;
+}
+
+.hero__button {
+    width: 164px;
+    height: 48px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 39px;
+    font-weight: 600;
+}
+
+.hero-image {
+    margin-top: 146px;
+}

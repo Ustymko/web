@@ -1,0 +1,46 @@
+body {
+    color: black;
+    font-family: 'Mulish', 'Inter', 'Playfair Display';
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1219px;
+}
+
+a {
+    text-decoration: none;
+    color: #B8BECD;
+}
+
+li {
+    display: block;
+}
+
+button {
+    width: 132px;
+    height: 48px;
+
+    background: #FB8F1D;
+    border-radius: 8px;
+    border: 0;
+    color: #fff;
+    border: 1px solid #FB8F1D;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    font-family: 'Playfair Display', serif;
+
+    color: #000000;
+}
+
+footer {
+    background-color: #F8F8F8;
+    height: 195px;
+}
