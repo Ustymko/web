@@ -1,18 +1,18 @@
 .corporation-info {
     display: flex;
     justify-content: space-between;
-    padding-top: 31px;
+    align-items: center;
+    padding-top: 2rem;
 }
 
 .separator {
     margin-top: 26px;
-    width: 1219px;
     height: 0.6px;
     background: #C4C4C4;
 }
 
 .social-media ul {
-    margin-top: 32.4px;
+    margin-top: 2rem;
     display: flex;
     float: inherit;
     justify-content: center;
@@ -20,5 +20,19 @@
 }
 
 .social-media li {
-    margin-right: 35px;
+    margin-right: 2.1875rem;
+}
+
+.social-media li a img {
+    transition: all 0.2s ease-in-out;
+}
+
+.social-media li a img:hover {
+    transform: scale(1.5);
+}
+
+@media screen and (max-width: 390px) {
+    .corporation-info p {
+        font-size: 0.8rem;
+    }
 }

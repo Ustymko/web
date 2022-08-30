@@ -1,12 +1,30 @@
 .header {
+    position: fixed;
+    top: 0;
+    width: 1219px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 35px;
+    padding: 15px;
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    z-index: 10;
 }
 
-.header img {
-    margin-right: 35px;
+.header-menu {
+    display: none;
+}
+
+.header-menu img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.header-menu img:hover {
+    transform: scale(1.5);
 }
 
 .header__nav ul {
@@ -15,10 +33,9 @@
     padding: 0;
 }
 
-
 .header__nav li {
-    margin-right: 35px;
-    line-height: 19px;
+    margin-right: 2.1875rem;
+    line-height: 1.1875rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
 }
@@ -32,9 +49,67 @@
     background-color: white;
     color: #FB8F1D;
 
-    margin-right: 18px;
+    margin-right: 1.125rem;
 }
 
 .hero-image {
-    margin-left: 80px;
+    margin-left: 5rem;
+}
+
+@media screen and (max-width: 1444px) {
+    .header {
+        width: 85vw;
+    }
+}
+
+@media screen and (max-width: 874px) {
+    .header__nav {
+        background: #e3ffe4;
+        position: fixed;
+        text-align: center;
+        top: 70px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-top: 0;
+        clip-path: circle(0 at top left);
+        transition: clip-path 0.6s ease-in;
+    }
+
+    .header__nav.open {
+        clip-path: circle(1000px at top);
+    }
+
+    /* .header__nav .header__nav-item {
+        margin-right: 0;
+        padding-top: 10vh;
+        flex: 1;
+    } */
+
+    /* .header__buttons {
+        order: 5;
+    } */
+    .header :nth-child(3) {
+        order: 2;
+    }
+
+
+    .header-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .header__nav ul {
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .header__buttons button {
+        width: 20vw;
+        height: 40px;
+    }
 }

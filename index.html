@@ -12,27 +12,33 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter&family=Mulish:wght@200&family=Playfair+Display&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css" />
+
 </head>
 
 <body>
+    <header class="header">
+        <div class="header-menu" onclick="toggleMenu()">
+            <img src="images/hamburger-menu.svg" alt="Menu icon">
+        </div>
+        <nav id="nav-links" class="header__nav">
+            <ul>
+                <li><a class="header__nav__home" href="">Home</a></li>
+                <li><a href="">Destinations</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Partner</a></li>
+            </ul>
+        </nav>
+        <img class="" src="images/logo.svg" alt="logo" />
+        <div class="header__buttons">
+            <button class="header__buttons__login">Login</button>
+            <button>Register</button>
+        </div>
+    </header>
+
     <section class="hero">
         <div class="container">
-            <header class="header">
-                <nav class="header__nav">
-                    <ul>
-                        <li><a class="header__nav__home" href="">Home</a></li>
-                        <li><a href="">Destinations</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Partner</a></li>
-                    </ul>
-                </nav>
-                <img src="images/logo.svg" alt="logo" />
-                <div class="header__buttons">
-                    <button class="header__buttons__login">Login</button>
-                    <button>Register</button>
-                </div>
-            </header>
             <div class="container-hero">
                 <div class="hero__inner">
                     <h2 class="hero__title">Guides by Thousand Sunny</h2>
@@ -43,7 +49,7 @@
                     </p>
                     <button class="hero__button">Download</button>
                 </div>
-                <img class="hero-image" src="./images/pic1.svg" alt="decorative-picture">
+                <img class="hero-image" src="./images/pic1.svg" alt="decorative picture">
             </div>
         </div>
     </section>
@@ -53,11 +59,11 @@
             <div class="container-testimonials">
                 <div class="container-quote">
                     <h2 class="testimonials__title">Testimonials</h2>
-                    <img src="images/star.svg" alt="star">
-                    <img src="images/star.svg" alt="star">
-                    <img src="images/star.svg" alt="star">
-                    <img src="images/star.svg" alt="star">
-                    <img src="images/star.svg" alt="star">
+                    <img class="star-picture bounce" src="images/star.svg" alt="star">
+                    <img class="star-picture bounce" src="images/star.svg" alt="star">
+                    <img class="star-picture bounce" src="images/star.svg" alt="star">
+                    <img class="star-picture bounce" src="images/star.svg" alt="star">
+                    <img class="star-picture bounce" src="images/star.svg" alt="star">
                     <blockquote>
                         <p>
                             “Quisque in lacus a urna fermentum euismod.
@@ -66,6 +72,7 @@
                             turpis nec”
                         </p>
                     </blockquote>
+                    <img class="container-testimonials__picture" src="images/pic2.svg" alt="man-with-camera">
                     <p class="author">
                         Edward Newgate
                     </p>
@@ -144,6 +151,7 @@
             </div>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 
 </html>

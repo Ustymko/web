@@ -1,11 +1,32 @@
 body {
-    color: black;
+    /* color: black; */
     font-family: 'Mulish', 'Inter', 'Playfair Display';
+}
+
+@media screen and (max-width: 850px) {
+    body {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    :root {
+        font-size: 12px;
+    }
 }
 
 .container {
     margin: 0 auto;
     max-width: 1219px;
+}
+
+@media screen and (max-width: 1256px) {
+    .container {
+        padding: 0 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 a {
@@ -32,11 +53,10 @@ button {
 
 h2 {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 50px;
-    letter-spacing: 1px;
+    font-size: 2rem;
+    line-height: 3.125rem;
+    letter-spacing: 0.0625rem;
     font-family: 'Playfair Display', serif;
-
     color: #000000;
 }
 
