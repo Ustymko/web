@@ -1,0 +1,24 @@
+.corporation-info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 31px;
+}
+
+.separator {
+    margin-top: 26px;
+    width: 1219px;
+    height: 0.6px;
+    background: #C4C4C4;
+}
+
+.social-media ul {
+    margin-top: 32.4px;
+    display: flex;
+    float: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media li {
+    margin-right: 35px;
+}

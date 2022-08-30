@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.header img {
+    margin-right: 35px;
+}
+
+.header__nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header__nav li {
+    margin-right: 35px;
+    line-height: 19px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.header__nav__home {
+    color: black;
+    font-weight: 500;
+}
+
+.header__buttons__login {
+    background-color: white;
+    color: #FB8F1D;
+
+    margin-right: 18px;
+}
+
+.hero-image {
+    margin-left: 80px;
+}

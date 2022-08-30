@@ -1,0 +1,13 @@
+@import "./normalize.min.css";
+
+@import "./globals.css";
+
+@import "./header.css";
+
+@import "./hero.css";
+
+@import "./testimonials.css";
+
+@import "./trending-stories.css";
+
+@import "./footer.css";
