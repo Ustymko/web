@@ -1,0 +1,9 @@
+.contact{
+    display: flex;
+    margin-top: 100px;
+}
+
+.ulist{
+    margin-left: 200px;
+    font-size: 21px;
+}

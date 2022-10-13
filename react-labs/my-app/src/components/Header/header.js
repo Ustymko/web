@@ -1,5 +1,6 @@
 import './header.css'
 import { Container, Nav, Navbar, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 function header() {
     return(
@@ -11,10 +12,10 @@ function header() {
                             Autoria
                         </div>
                         <Nav style={{fontSize: 25}}>
-                            <Nav.Link style={{marginRight: 10}}>Home</Nav.Link>
-                            <Nav.Link style={{marginRight: 10}}>Account</Nav.Link>
-                            <Nav.Link style={{marginRight: 10}}>About</Nav.Link>
-                            <Nav.Link style={{marginRight: 10}}>Contact</Nav.Link>
+                            <Nav.Link as={Link} to="/" style={{marginRight: 10}}>Home</Nav.Link>
+                            <Nav.Link as={Link} to="/account" style={{marginRight: 10}}>Account</Nav.Link>
+                            <Nav.Link as={Link} to="/about" style={{marginRight: 10}}>About</Nav.Link>
+                            <Nav.Link as={Link} to="/contact" style={{marginRight: 10}}>Contact</Nav.Link>
                         </Nav>
                         <Button style={{marginLeft: 300}} variant="light">Login</Button>
                         <Button style={{marginLeft: 30}} variant="outline-light">Register</Button>
