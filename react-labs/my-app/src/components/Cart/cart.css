@@ -1,12 +1,7 @@
-.about{
+.cart{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 40px;
-}
-
-.about p{
     margin-top: 50px;
-    width: 650px;
 }

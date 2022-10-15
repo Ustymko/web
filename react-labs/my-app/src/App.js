@@ -6,10 +6,10 @@ import {
 
 import './App.css';
 import Header from './components/Header/header';
-import Content from './components/Content/content';
-import About from './components/About/about';
-import Account from './components/Account/account';
-import Contact from './components/Contact/contact';
+import Catalog from './components/Catalog/catalog';
+import Cart from './components/Cart/cart';
+import Home from './components/Home/home';
+import Footer from "./components/Footer/footer";
 
 
 function App() {
@@ -18,11 +18,11 @@ function App() {
         <div>
           <Header/>
           <Routes>
-            <Route path="/contact" element={<Contact/>}/>
-            <Route path="/account" element={<Account/>}/>
-            <Route path="/about" element={<About/>}/>
-            <Route path="/" element={<Content/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/catalog" element={<Catalog/>}/>
+            <Route path="/" element={<Home/>}/>
           </Routes>
+          <Footer/>
         </div>
       </Router>
   );
