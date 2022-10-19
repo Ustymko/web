@@ -10,6 +10,7 @@ import Catalog from './components/Catalog/catalog';
 import Cart from './components/Cart/cart';
 import Home from './components/Home/home';
 import Footer from "./components/Footer/footer";
+import Item from "./components/Item/item";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <div>
           <Header/>
           <Routes>
+            <Route path="/item" element={<Item/>}/>
             <Route path="/cart" element={<Cart/>}/>
             <Route path="/catalog" element={<Catalog/>}/>
             <Route path="/" element={<Home/>}/>
