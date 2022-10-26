@@ -1,0 +1,30 @@
+.item-page{
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    width: 60%;
+    justify-content: space-between;
+    height: 500px;
+}
+
+.item-page__info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-page__image{
+    height: 300px;
+    margin-right: 200px;
+}
+
+.item-page__bottom{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-page__bottom__buttons{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
