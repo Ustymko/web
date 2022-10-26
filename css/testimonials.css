@@ -1,17 +1,20 @@
 .testimonials {
     background: #F8F8F8;
-    height: 774;
-}
-
-.testimonials__title {
-    padding-top: 79px;
 }
 
 .container-quote {
-    margin-top: 145px;
-    width: 450px;
-    margin-left: 110px;
-    margin-bottom: 179px;
+    margin-top: 9.0625rem;
+    width: 28.125rem;
+    margin-left: 6.875rem;
+    margin-bottom: 11.1875rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container-quote {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 .container-quote img {
@@ -25,9 +28,9 @@ blockquote {
 
 blockquote p {
     font-family: 'Mulish', sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
-    line-height: 36px;
+    line-height: 2.25rem;
 
     color: black;
 
@@ -35,22 +38,70 @@ blockquote p {
 
 .container-quote .author {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Inter', sans-serif;
 }
 
 .container-quote .founder {
     color: rgba(0, 0, 0, 0.85);
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .container-testimonials {
     display: flex;
     justify-content: space-between;
+    margin-top: 150px;
 }
 
 .container-testimonials__picture {
-    margin-top: 189px;
-    margin-right: 100px;
+    width: 25vw;
+}
+
+.container-quote .container-testimonials__picture {
+    display: none;
+}
+
+.star-picture {
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    transform-origin: bottom;
+}
+
+.bounce:hover {
+    animation-name: bounce;
+    animation-timing-function: ease-in;
+}
+
+@keyframes bounce {
+    /* 0% {
+        transform: translateY(0);
+    } */
+
+    50% {
+        transform: translateY(-1rem);
+    }
+
+    /* 100% {
+        transform: translateY(0);
+    } */
+}
+
+@media screen and (max-width: 850px) {
+    .testimonials__title {
+        margin: auto;
+    }
+
+    .container-testimonials__picture {
+        display: none;
+    }
+
+    .container-quote .container-testimonials__picture {
+        display: block;
+        width: 50vw;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
