@@ -12,6 +12,7 @@ export const cartSlice = createSlice({
                 state.cars.push({
                     id: action.payload.id,
                     price: action.payload.price,
+                    producer: action.payload.producer,
                     horsepower: action.payload.horsepower,
                     image_uri: action.payload.image_uri,
                     amount: action.payload.amount

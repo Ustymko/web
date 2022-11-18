@@ -42,7 +42,7 @@ function Items(props) {
 
   return <div className="items">
     {rendered_items_list}
-    </div>;
+    </div>
 }
 
 export default Items;

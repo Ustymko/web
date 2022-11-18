@@ -15,7 +15,7 @@ function Item(){
     const [car, setCar] = useState('');
 
     const dispatch = useDispatch();
-    const handle = (id, horsepower, price, image_uri) => dispatch(addCar({id, horsepower, price, image_uri, amount: 1}))
+    const handle = (id, horsepower, producer, price, image_uri) => dispatch(addCar({id, horsepower, producer, price, image_uri, amount: 1}))
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
@@ -43,7 +43,7 @@ function Item(){
                         <h3>Price: ${car.price}.00</h3>
                         <div className="item-page__bottom__buttons">
                             <Button as={Link} to="/catalog" style={{width: 180}} variant="outline-dark">Go back</Button>
-                            <Button onClick={() => handle(car.id, car.horsepower, car.price, car.image_uri)} style={{width: 180}} variant="light">Add to cart</Button>
+                            <Button onClick={() => handle(car.id, car.horsepower, car.producer, car.price, car.image_uri)} style={{width: 180}} variant="light">Add to cart</Button>
                         </div>
                     </div>
                 </div>
