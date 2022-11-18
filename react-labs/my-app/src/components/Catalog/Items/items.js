@@ -2,8 +2,6 @@ import "./items.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import store from "../../../redux/store";
-import { Provider } from "react-redux";
 
 function Items(props) {
   let rendered_items_list = [];

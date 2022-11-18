@@ -28,23 +28,6 @@ function Cart(){
             <h3 className="price">${item.price}</h3>
         </div>
     ));
-    //     <Card style={{width: 1000}} key={item.id} className="cart-card">
-    //     <Card.Img
-    //     style={{ objectFit: "cover", height: 100, paddingBottom: 20 }}
-    //     variant="top"
-    //     src={item.image_uri}
-    //     />
-    //     <Card.Title style={{marginRight: 100}}>{item.producer}</Card.Title>
-    //     <div className="price">
-    //         <Card.Text style={{ fontWeight: 500 }}>Price:</Card.Text>
-    //         <Card.Text>$ {item.price}</Card.Text>
-    //     </div>
-    //     <div className="amount">
-    //         <Button onClick={() => handleDecrement(item)} variant="outline-dark">-</Button>
-    //         <h1>{item.amount}</h1>
-    //         <Button onClick={() => handleIncrement(item)} variant="dark">+</Button>
-    //     </div>
-    // </Card>
     return(
         <div className="cart">
             <h1>Shopping cart</h1>
