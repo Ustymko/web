@@ -1,7 +1,21 @@
 .cart{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px;
+    margin-top: 10px;
+}
+
+.card{
+    margin-right: 40px;
+    margin-top: 40px;
+    max-width: 250px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.amount{
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
 }
