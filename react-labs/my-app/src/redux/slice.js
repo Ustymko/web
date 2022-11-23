@@ -28,9 +28,12 @@ export const cartSlice = createSlice({
             if (state.cars[carIndex].amount === 0){
                 state.cars.splice(carIndex, 1);
             }
+        },
+        cleanCart: (state, action) =>{
+            state.cars = []
         }
     }
 });
 
-export const { addCar, deleteCar } = cartSlice.actions;
+export const { addCar, deleteCar, cleanCart } = cartSlice.actions;
 export default cartSlice.reducer;

@@ -17,8 +17,8 @@ function Cart(){
         total_price += i.price * i.amount;
     }
     let rendered_items_list = listItems.map((item) => (
-        <div className="cart-card">
-            <img src={item.image_uri}/>
+        <div className="cart-card" key={item.id}>
+            <img alt="car" src={item.image_uri}/>
             <h2>{item.producer}</h2>
             <div className="amount">
                 <Button variant="outline-dark" style={{marginRight: 10}} onClick={() => handleDecrement(item)}>-</Button>
@@ -38,7 +38,7 @@ function Cart(){
             </div>
             <div className="buttons">
                 <Button as={Link} to="/catalog" variant="light">Back to catalog</Button>
-                <Button variant="dark">Continue</Button>
+                <Button as={Link} to="/acceptation_form" variant="dark">Continue</Button>
             </div>
         </div>
     )
