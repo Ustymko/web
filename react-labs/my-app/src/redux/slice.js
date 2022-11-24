@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 export const cartSlice = createSlice({
     name: "cart",
     initialState: {
-        cars: []
+        cars: [],
+        loggedIn: false
     },
     reducers: {
         addCar: (state, action) => {
@@ -29,11 +30,11 @@ export const cartSlice = createSlice({
                 state.cars.splice(carIndex, 1);
             }
         },
-        cleanCart: (state, action) =>{
-            state.cars = []
+        setLoggedIn: (state, action) => {
+            state.loggedIn = action.payload
         }
     }
 });
 
-export const { addCar, deleteCar, cleanCart } = cartSlice.actions;
+export const { addCar, deleteCar, setLoggedIn } = cartSlice.actions;
 export default cartSlice.reducer;
