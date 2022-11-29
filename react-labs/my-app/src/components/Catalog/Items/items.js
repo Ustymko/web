@@ -4,87 +4,6 @@ import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Items(props) {
-  // let items_list = [
-  //     {'producer': '123',
-  //     'image': 'https://thumbs.dreamstime.com/b/red-car-isolated-8213963.jpg',
-  //     'price': 100,
-  //     'horsepower': 50},
-  //     {'producer': '1234',
-  //     'image': 'https://thumbs.dreamstime.com/b/red-car-isolated-8213963.jpg',
-  //     'price': 1500,
-  //     'horsepower': 10},
-  //     {'producer': '124',
-  //     'image': 'https://thumbs.dreamstime.com/b/red-car-isolated-8213963.jpg',
-  //     'price': 40,
-  //     'horsepower': 41},
-  //     {'producer': 'VolksWagen',
-  //     'image': 'https://thumbs.dreamstime.com/b/red-car-isolated-8213963.jpg',
-  //     'price': 250,
-  //     'horsepower': 30},
-  //     {'producer': 'VolksWagen',
-  //     'image': 'https://thumbs.dreamstime.com/b/red-car-isolated-8213963.jpg',
-  //     'price': 300,
-  //     'horsepower': 200},
-  //     {'producer': 'VolksWagen',
-  //     'image': 'https://thumbs.dreamstime.com/b/red-car-isolated-8213963.jpg',
-  //     'price': 250,
-  //     'horsepower': 260},
-  //     {'producer': 'VolksWagen',
-  //     'image': 'https://thumbs.dreamstime.com/b/red-car-isolated-8213963.jpg',
-  //     'price': 250,
-  //     'horsepower': 220},
-  //     {'producer': 'VolksWagen',
-  //     'image': 'https://thumbs.dreamstime.com/b/red-car-isolated-8213963.jpg',
-  //     'price': 250,
-  //     'horsepower': 200},
-  //     {'producer': 'VolksWagen',
-  //     'image': 'https://thumbs.dreamstime.com/b/red-car-isolated-8213963.jpg',
-  //     'price': 250,
-  //     'horsepower': 200},
-  //     {'producer': 'VolksWagen',
-  //     'image': 'https://thumbs.dreamstime.com/b/red-car-isolated-8213963.jpg',
-  //     'price': 250,
-  //     'horsepower': 200},
-  //     {'producer': 'VolksWagen',
-  //     'image': 'https://thumbs.dreamstime.com/b/red-car-isolated-8213963.jpg',
-  //     'price': 250,
-  //     'horsepower': 200}
-  // ]
-
-  // let sorted_list = [];
-
-  // const sortBy = props.sortingParameters.sortBy;
-  // const sortOrder = props.sortingParameters.sortingOrder;
-  // const searchValue = props.searchValueParameter;
-
-  // let foundItemsList = items_list.filter(car => car.producer.search(searchValue) !== -1);
-
-  // if(sortBy === "Sort by price"){
-  //     if(sortOrder === "Descending order"){
-  //         sorted_list = foundItemsList.sort(function(a, b){
-  //             return a.price < b.price ? 1 : -1;
-  //         })
-  //     }
-  //     else{
-  //         sorted_list = foundItemsList.sort(function(a, b){
-  //             return a.price < b.price ? -1 : 1;
-  //         })
-  //     }
-
-  // } else if(sortBy === "Sort by horsepower"){
-  //     if (sortOrder === "Descending order"){
-  //         sorted_list = foundItemsList.sort(function(a, b){
-  //             return a.horsepower < b.horsepower ? 1 : -1;
-  //         })
-  //     } else{
-  //         sorted_list = foundItemsList.sort(function(a, b){
-  //             return a.horsepower < b.horsepower ? -1 : 1;
-  //         })
-  //     }
-  // } else{
-  //     sorted_list = foundItemsList;
-  // }
-
   let rendered_items_list = [];
 
   if (props.cars.length > 0) {
@@ -119,7 +38,9 @@ function Items(props) {
     ));
   }
 
-  return <div className="items">{rendered_items_list}</div>;
+  return <div className="items">
+    {rendered_items_list}
+    </div>
 }
 
 export default Items;
