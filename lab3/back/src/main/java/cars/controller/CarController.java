@@ -1,14 +1,7 @@
 package cars.controller;
 
 import java.util.List;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,41 +16,52 @@ import cars.service.CarService;
 import cars.entity.CarEntity;
 
 
-//@Consumes("application/json")
-//@Produces("application/json")
 @RestController
 @RequestMapping(path = "/cars")
 public class CarController {
 
-  @Autowired
-  CarService service;
+    @Autowired
+    CarService service;
 
-  public CarController(CarService service) {
-    this.service = service;
-  }
+    public CarController(CarService service) {
+        this.service = service;
+    }
 
 
-  @CrossOrigin
-  @GetMapping
-  public List<CarEntity> getAllCars(){
-    return service.getAllCars();
-  }
+    @CrossOrigin
+    @GetMapping
+    public List<CarEntity> getAllCars() {
+        return service.getAllCars();
+    }
 
-  @CrossOrigin
-  @PostMapping
-  public void saveCar(@RequestBody CarEntity car){
-    service.saveCar(car);
-  }
+    @CrossOrigin
+    @GetMapping(path = "/{id}")
+    public Optional<CarEntity> getCarById(@PathVariable("id") Long id) {
+        return service.getCarById(id);
+    }
 
-  @CrossOrigin
-  @PutMapping(path = "/{id}")
-  public void updateCar(@RequestBody CarEntity car, @PathVariable("id") Long id){
-    service.updateCar(id, car);
-  }
+    @CrossOrigin
+    @GetMapping(path = "/sortingParameter/{sortingParameter}/sortingOrder/{sortingOrder}")
+    public List<CarEntity> getSortedCars(@PathVariable("sortingParameter") String sortingParameter,
+        @PathVariable("sortingOrder") String sortingOrder) {
+        return service.getSortedCars(sortingParameter, sortingOrder);
+    }
 
-  @CrossOrigin
-  @DeleteMapping(path = "/{id}")
-  public void deleteCar(@PathVariable("id") Long id){
-    service.deleteCar(id);
-  }
+    @CrossOrigin
+    @PostMapping
+    public void saveCar(@RequestBody CarEntity car) {
+        service.saveCar(car);
+    }
+
+    @CrossOrigin
+    @PutMapping(path = "/{id}")
+    public void updateCar(@RequestBody CarEntity car, @PathVariable("id") Long id) {
+        service.updateCar(id, car);
+    }
+
+    @CrossOrigin
+    @DeleteMapping(path = "/{id}")
+    public void deleteCar(@PathVariable("id") Long id) {
+        service.deleteCar(id);
+    }
 }
