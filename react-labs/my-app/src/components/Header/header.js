@@ -1,8 +1,12 @@
 import './header.css'
-import { Container, Nav, Navbar } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Container, Nav, Navbar, Button } from 'react-bootstrap'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { setLoggedIn } from '../../redux/slice';
 
-function header() {
+function Header() {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     return(
         <div className="header">
             <Navbar variant='dark'>
@@ -16,10 +20,15 @@ function header() {
                             <Nav.Link as={Link} to="/catalog" style={{marginRight: 50}}>Catalog</Nav.Link>
                             <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
                         </Nav>
+                        <Button style={{marginLeft: 320}} onClick={() => {
+                            localStorage.clear()
+                            dispatch(setLoggedIn(false))
+                            navigate("/")}} 
+                            variant='light'>Sign out</Button>
                 </Container>
             </Navbar>
         </div>
     )
 }
 
-export default header;
+export default Header;

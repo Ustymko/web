@@ -90,20 +90,8 @@ function Home(){
                     </p>
                 </div>
             </div>
-            {/* <div className="advs-cards">
-                {renderedItems}
-            </div> */}
             <ul>
                 {renderedItems}
-                {/* <li>1</li>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li> */}
             </ul>
             <Button onClick={() => setViewMoreClicks(viewMoreClicks + 1)} style={{borderRadius: 10, width: 200, height: 50, margin: 80}} variant="light">View more</Button>
         </div>

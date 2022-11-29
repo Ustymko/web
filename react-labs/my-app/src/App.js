@@ -3,6 +3,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import './App.css';
 import Header from './components/Header/header';
@@ -13,22 +14,30 @@ import Footer from "./components/Footer/footer";
 import Item from "./components/Item/item";
 import AcceptationForm from "./components/AcceptationForm/acceptation_form";
 import Success from "./components/Success/success";
+import Login from "./components/Login/login";
+import Registration from "./components/Registration/registration";
 
 function App() {
+  const pages = [
+      {path: "/success", element: <Success/>},
+      {path: "/acceptation_form", element: <AcceptationForm/>},
+      {path: "/item", element: <Item/>},
+      {path: "/cart", element: <Cart/>},
+      {path: "/catalog", element: <Catalog/>},
+      {path: "/home", element: <Home/>}]
+  let renderedPages = pages.map((item, key) =>
+    <Route key={key} path={item.path} element={item.element}/>
+  )
+  const cart = useSelector(state => state.cart)
   return (
       <Router>
-        <div>
-          <Header/>
+        {cart.loggedIn ? <Header/> : null}
           <Routes>
-            <Route path="/success" element={<Success/>}/>
-            <Route path="/acceptation_form" element={<AcceptationForm/>}/>
-            <Route path="/item" element={<Item/>}/>
-            <Route path="/cart" element={<Cart/>}/>
-            <Route path="/catalog" element={<Catalog/>}/>
-            <Route path="/" element={<Home/>}/>
+            <Route path="/" element={<Login/>}/>
+            <Route path="/registration" element={<Registration/>}/>
+            {cart.loggedIn ? renderedPages : null}
           </Routes>
-          <Footer/>
-        </div>
+        <Footer/>
       </Router>
   );
 }
